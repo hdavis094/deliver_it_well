@@ -38,13 +38,13 @@ describe('server/app.js', function() {
     });
   });
 
-  // it('page asks a question', (done) => {
-  // chai.request(server)
-  //   .get('/')
-  //   .end((err, res) => {
-  //     expect(err).not.exist;
-  //     expect(JSON.stringify(res.text)).to.contain("You're serving up the public folder, but do your tests pass?");
-  //     done();
-  //   });
-  // });
+  it('page asks a question', (done) => {
+  chai.request(server)
+    .get('/')
+    .end((err, res) => {
+      expect(err).not.exist;
+      expect(JSON.stringify(res.text)).to.contain("You're serving up the public folder, but do your tests pass?");
+      done();
+    });
+  });
 })
